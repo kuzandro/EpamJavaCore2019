@@ -3,7 +3,7 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-	    resultEqt(1, 2,1);
+        resultEqt(1, 2,1);
         resultEqt(1, 24,88);
         resultEqt(25, 2,5.6f);
     }

@@ -1,31 +1,14 @@
 package epam.homework5.carrier.domain;
 
 import epam.homework5.transportation.domain.Transportation;
+import epam.homework5.common.Domain;
 
 import java.util.Arrays;
 
-public class Carrier {
-    private Long id;
-    private String name;
+public class Carrier extends Domain {
     private String address;
     private CarrierType carrierType;
     private Transportation[] transportations;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public String getAddress() {
         return address;
@@ -54,8 +37,8 @@ public class Carrier {
     @Override
     public String toString() {
         return "Carrier{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
+                "id=" + getId() +
+                ", name='" + getName() + '\'' +
                 ", adress=" + address +
                 ", carrierType=" + carrierType +
                 ", transportations=" + Arrays.toString(transportations) +

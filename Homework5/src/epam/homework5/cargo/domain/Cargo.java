@@ -1,31 +1,15 @@
 package epam.homework5.cargo.domain;
 
 import epam.homework5.transportation.domain.Transportation;
+import epam.homework5.common.Domain;
 
 import java.util.Arrays;
 
-public class Cargo {
-    private Long id;
-    private String name;
+public class Cargo extends Domain {
     private int weight;
     private CargoType cargoType;
     private Transportation[] transportations;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public int getWeight() {
         return weight;
@@ -54,8 +38,8 @@ public class Cargo {
     @Override
     public String toString() {
         return "Cargo{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
+                "id=" + getId() +
+                ", name='" + getName() + '\'' +
                 ", weight=" + weight +
                 ", cargoType=" + cargoType +
                 ", transportations=" + Arrays.toString(transportations) +

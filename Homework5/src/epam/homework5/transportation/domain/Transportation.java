@@ -2,12 +2,12 @@ package epam.homework5.transportation.domain;
 
 import epam.homework5.cargo.domain.Cargo;
 import epam.homework5.carrier.domain.Carrier;
+import epam.homework5.common.Domain;
 
 import java.util.Arrays;
 import java.util.Date;
 
-public class Transportation {
-    private Long id;
+public class Transportation extends Domain {
     private Cargo cargo;
     private Carrier carrier;
     private String description;
@@ -22,13 +22,6 @@ public class Transportation {
         this.date = date;
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getDescription() {
         return description;
@@ -66,7 +59,7 @@ public class Transportation {
     public String toString() {
         if (cargo != null && carrier != null) {
             return "Transportation{" +
-                    "id=" + id +
+                    "id=" + getId() +
                     ", Bill to='" + billTo + '\'' +
                     ", Cargo=" + cargo.getName() +
                     ", Carrier=" + carrier.getName() +
@@ -75,7 +68,7 @@ public class Transportation {
                     '}';
         } else {
             return "Transportation{" +
-                    "id=" + id +
+                    "id=" + getId() +
                     ", Bill to='" + billTo + '\'' +
                     ", Cargo=" + null +
                     ", Carrier=" + null +
